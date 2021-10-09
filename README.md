@@ -1,13 +1,3 @@
-# Nimble Technical Exercise (React)
-<p>
-  <p>
-    Thank you for your interest in Nimble! For this task, please implement a combination of React components to create a page with a list of candidates using the data found in src/data/candidates.json.
-  </p>
-
-  <p>
-    Please host your code on Github (or something similar) and share the repo link via email to wgray@hirenimble.com and lauren@hirenimble.com. Good luck!
-  </p>
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
