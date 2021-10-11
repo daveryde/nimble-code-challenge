@@ -11,12 +11,8 @@ import data from '../data/candidates.json';
 
 const CandidateTable = () => {
     const [allChecked, setAllChecked] = useState(false);
-    const [isDisplayed, setIsDisplayed] = useState(false);
     const [renderable, setRenderable] = useState(0);
-
-    // useEffect(() => {
-    //     console.log('renderable :', renderable);
-    // }, [renderable])
+    const [isDisplayed, setIsDisplayed] = useState(false);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -62,11 +58,10 @@ const CandidateTable = () => {
                             <Fragment key={result.id}>
                                 <tr
                                     className="table__row"
-                                    onClick={() => { 
+                                    onClick={() => {
                                         setRenderable(result.id);
-                                        setIsDisplayed(!isDisplayed); 
-                                    }}
-                                >
+                                        setIsDisplayed(!isDisplayed);
+                                    }}>
                                     <td className="table__data">
                                         <input type="checkbox" checked={allChecked} />
                                     </td>
@@ -85,8 +80,6 @@ const CandidateTable = () => {
                                 </tr>
                                 {renderable === result.id && isDisplayed &&
                                     <CandidateExpand
-                                        dataID={renderable}
-                                        resultID={result.id}
                                         applications={result.applications}
                                         className="table__data--expand"
                                     />
