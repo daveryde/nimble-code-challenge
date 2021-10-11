@@ -1,10 +1,10 @@
-import React, { useState, Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 // custom components
 import CandidateExpand from './CandidateExpand';
 
 // svgs
-import { DownCaret, SearchIcon } from 'ui-kit/icons';
+import { DownCaret, SearchIcon, PlusSign, MinusSign } from 'ui-kit/icons';
 
 // data source
 import data from '../data/candidates.json';
@@ -13,25 +13,28 @@ const CandidateTable = () => {
     const [allChecked, setAllChecked] = useState(false);
     const [renderable, setRenderable] = useState(0);
     const [isDisplayed, setIsDisplayed] = useState(false);
-
-    const onSubmit = (e) => {
-        e.preventDefault();
-
-        // Set state to filter the rows and columns to the query
-    }
+    const [query, setQuery] = useState('');
 
     return (
         <>
             <section className="table__utilities">
-                <p className="table__count">{data.count} Candidates</p>
-
-                <form
-                    className="table__search"
-                    onSubmit={onSubmit}>
+                <div className="table__info">
+                    <p className="table__count">{data.count} Candidates</p>
+                    <p 
+                        className="table__filter--link"
+                        onClick={() => setQuery('')}    
+                        >
+                            Clear All Filter
+                    </p>
+                </div>
+                <form className="table__search">
                     <input
                         className="table__input"
                         type="text"
-                        placeholder="Search by candidate or keyword" />
+                        placeholder="Search by candidate or keyword" 
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
+                        />
                     <button className="table__submit">
                         <SearchIcon className="svg__icon svg__icon--search" />
                     </button>
@@ -86,6 +89,9 @@ const CandidateTable = () => {
                                         </td>
                                         <td className="table__data">
                                             {result.applications[0].updated}
+                                        </td>
+                                        <td>
+                                            {renderable === result.id && isDisplayed ? <MinusSign /> : <PlusSign />}
                                         </td>
                                     </tr>
                                     {renderable === result.id && isDisplayed &&

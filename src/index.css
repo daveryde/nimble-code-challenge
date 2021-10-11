@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #f8f8f8;
+  color: #797b84;
 }
 
 code {
@@ -29,8 +30,19 @@ code {
   margin-left: 2.5rem;
 }
 
-.table__count {
+.table__info {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 90vw;
+}
+
+.table__count, .table__filter--link {
   font-size: .9rem;
+}
+
+.table__filter--link {
+  cursor: pointer;
 }
 
 .table__search {
@@ -40,14 +52,17 @@ code {
 
 .table__input {
   min-width: 90%;
-  height: 3.5rem;
+  height: 3rem;
+  padding: .5rem;
   border: .1rem solid #e6e6e6;
+  font-size: 1.2rem;
 }
 
 .table__input::placeholder {
+  padding: .5rem;
+  color: #dddddd;
   font-size: 1rem;
   letter-spacing: .0500rem;
-  padding: .5rem;
 }
 
 .table__submit {
@@ -97,6 +112,7 @@ code {
 .svg__icon {
   width: 2vmin;
   margin-left: .3rem;
+  fill: #797b84;
 }
 
 .svg__icon--search {
