@@ -1,4 +1,5 @@
 import React from 'react';
+import { colorMapping } from 'utils/enums';
 
 const CandidateExpand = (applicationList) => {
     return (
@@ -13,7 +14,7 @@ const CandidateExpand = (applicationList) => {
                             {application.role.title}
                         </td>
                         <td className="table__data--expand">
-                            {application.new_status.label}
+                        <div className={`table__status table__status--${colorMapping[application.new_status.color]}`} /> {application.new_status.label}
                         </td>
                     </tr>
                 )

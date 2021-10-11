@@ -109,6 +109,30 @@ code {
   background: #fff;
 }
 
+.table__status {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  margin-right: .5rem;
+  border-radius: 50%;
+}
+
+.table__status--red {
+  background: red;
+}
+
+.table__status--green {
+  background: green;
+}
+
+.table__status--blue {
+  background: blue;
+}
+
+.table__status--yellow {
+  background: yellow;
+}
+
 .svg__icon {
   width: 2vmin;
   margin-left: .3rem;

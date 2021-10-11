@@ -8,6 +8,7 @@ import { DownCaret, SearchIcon, PlusSign, MinusSign } from 'ui-kit/icons';
 
 // data source
 import data from '../data/candidates.json';
+import { colorMapping } from 'utils/enums';
 
 const CandidateTable = () => {
     const [allChecked, setAllChecked] = useState(false);
@@ -20,21 +21,21 @@ const CandidateTable = () => {
             <section className="table__utilities">
                 <div className="table__info">
                     <p className="table__count">{data.count} Candidates</p>
-                    <p 
+                    <p
                         className="table__filter--link"
-                        onClick={() => setQuery('')}    
-                        >
-                            Clear All Filter
+                        onClick={() => setQuery('')}
+                    >
+                        Clear All Filter
                     </p>
                 </div>
                 <form className="table__search">
                     <input
                         className="table__input"
                         type="text"
-                        placeholder="Search by candidate or keyword" 
+                        placeholder="Search by candidate or keyword"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
-                        />
+                    />
                     <button className="table__submit">
                         <SearchIcon className="svg__icon svg__icon--search" />
                     </button>
@@ -82,7 +83,7 @@ const CandidateTable = () => {
                                             {result.name}
                                         </td>
                                         <td className="table__data">
-                                            {result.applications[0].new_status.label}
+                                            <div className={`table__status table__status--${colorMapping[result.applications[0].new_status.color]}`} /> {result.applications[0].new_status.label}
                                         </td>
                                         <td className="table__data">
                                             {result.applications.length}
