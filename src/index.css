@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f8f8f8;
 }
 
 code {
@@ -12,17 +13,67 @@ code {
     monospace;
 }
 
-.table {
+.header__container, .main__container {
+  margin: 0 2rem;
+}
+
+.header__text {
+  font-size: 1.8rem;
+}
+
+.table__utilities {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin-left: 2.5rem;
+}
+
+.table__count {
+  font-size: .9rem;
+}
+
+.table__search {
+  display: flex;
   width: 100%;
 }
 
+.table__input {
+  min-width: 90%;
+  height: 3.5rem;
+  border: .1rem solid #e6e6e6;
+}
+
+.table__input::placeholder {
+  font-size: 1rem;
+  letter-spacing: .0500rem;
+  padding: .5rem;
+}
+
+.table__submit {
+  background: #2fb88d;
+  padding: .5rem 1.2rem;
+  border: none;
+}
+
+.table__container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.table__body {
+  width: 96vw;
+  margin: 2rem 0;
+}
+
 .table__head {
-  padding: .6rem;
+  padding: .8rem .5rem;
   text-align: left;
 }
 
 .table__row, .table__data {
-  border-bottom: 1px solid black;
+  border-bottom: .1rem solid #e6e6e6;
 }
 
 .table__row {
@@ -30,10 +81,25 @@ code {
   width: 100%;
 }
 
-.table__data {
-  padding: .5rem;
+.table__row--border .table__data--expand:nth-child(2) {
+  border-left: .5rem solid #e2e2e2;
+}
+
+.table__data, .table__data--expand {
+  max-width: 8rem;
+  padding: 1rem .5rem;
+}
+
+.table__data--expand {
+  background: #fff;
 }
 
 .svg__icon {
-  width: 2vmin
+  width: 2vmin;
+  margin-left: .3rem;
+}
+
+.svg__icon--search {
+  width: 2.5vmin;
+  margin: 0;
 }

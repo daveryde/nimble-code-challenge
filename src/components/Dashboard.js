@@ -3,9 +3,7 @@ import CandidateTable from './CandidateTable';
 
 const Dashboard = () => {
     return (
-        <>
-            <CandidateTable />
-        </>
+        <CandidateTable />
     )
 };
 

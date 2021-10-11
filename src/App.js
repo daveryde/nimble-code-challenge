@@ -5,10 +5,10 @@ import Dashboard from 'components/Dashboard';
 function App() {
   return (
     <>
-      <header>
-        <h1>Welcome to your dashboard</h1>
+      <header className="header__container">
+        <h1 className="header__text">Welcome to your dashboard</h1>
       </header>
-      <main>
+      <main className="main__container">
         <Dashboard />
       </main>
     </>
