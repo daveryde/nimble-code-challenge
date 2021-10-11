@@ -1,16 +1,19 @@
 import React from 'react';
 
 const CandidateExpand = (applicationList) => {
-    let data = applicationList.applications.map(item => item);
-    console.log(data);
     return (
         <>
-            {applicationList.applications.map(item => {
+            {applicationList.applications.map((application) => {
                 return (
-                    <div className="table__data--expand">
-                        {item.role.title}
-                        {item.new_status.label}
-                    </div>
+                    <tr key={application.id}>
+                        <td></td>
+                        <td>
+                            {application.role.title}
+                        </td>
+                        <td>
+                            {application.new_status.label}
+                        </td>
+                    </tr>
                 )
             })}
         </>

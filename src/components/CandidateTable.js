@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 
 // custom components
 import CandidateExpand from './CandidateExpand';
@@ -11,7 +11,12 @@ import data from '../data/candidates.json';
 
 const CandidateTable = () => {
     const [allChecked, setAllChecked] = useState(false);
-    const [isRendered, setIsRendered] = useState(false);
+    const [isDisplayed, setIsDisplayed] = useState(false);
+    const [renderable, setRenderable] = useState(0);
+
+    // useEffect(() => {
+    //     console.log('renderable :', renderable);
+    // }, [renderable])
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +25,7 @@ const CandidateTable = () => {
     }
 
     return (
-        <div>
+        <>
             <p>{data.count} Candidates</p>
 
             <form onSubmit={onSubmit}>
@@ -54,8 +59,14 @@ const CandidateTable = () => {
                 <tbody>
                     {data.results.map(result => {
                         return (
-                            <>
-                                <tr className="table__row" onClick={() => setIsRendered(!isRendered)}>
+                            <Fragment key={result.id}>
+                                <tr
+                                    className="table__row"
+                                    onClick={() => { 
+                                        setRenderable(result.id);
+                                        setIsDisplayed(!isDisplayed); 
+                                    }}
+                                >
                                     <td className="table__data">
                                         <input type="checkbox" checked={allChecked} />
                                     </td>
@@ -71,19 +82,21 @@ const CandidateTable = () => {
                                     <td className="table__data">
                                         {result.applications[0].updated}
                                     </td>
-
-                                    {isRendered &&
-                                        <CandidateExpand
-                                            applications={result.applications}
-                                        />
-                                    }
                                 </tr>
-                            </>
+                                {renderable === result.id && isDisplayed &&
+                                    <CandidateExpand
+                                        dataID={renderable}
+                                        resultID={result.id}
+                                        applications={result.applications}
+                                        className="table__data--expand"
+                                    />
+                                }
+                            </Fragment>
                         )
                     })}
                 </tbody>
             </table>
-        </div>
+        </>
     )
 };
 
