@@ -1,22 +1,31 @@
 import React from 'react';
+
+// enums
 import { colorMapping } from 'utils/enums';
+
+// table ui
+import {
+    TableRow,
+    TableData,
+    TableStatus
+} from '../ui-kit/Table';
 
 const CandidateExpand = (applicationList) => {
     return (
         <>
             {applicationList.applications.map((application) => {
                 return (
-                    <tr
-                        className="table__row table__row--border"
+                    <TableRow
+                        borderLeft
                         key={application.id}>
-                        <td></td>
-                        <td className="table__data--expand">
+                        <TableData />
+                        <TableData expand>
                             {application.role.title}
-                        </td>
-                        <td className="table__data--expand">
-                        <div className={`table__status table__status--${colorMapping[application.new_status.color]}`} /> {application.new_status.label}
-                        </td>
-                    </tr>
+                        </TableData>
+                        <TableData expand>
+                            <TableStatus background={colorMapping[application.new_status.color]} /> {application.new_status.label}
+                        </TableData>
+                    </TableRow>
                 )
             })}
         </>
