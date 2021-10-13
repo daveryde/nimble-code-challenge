@@ -64,11 +64,12 @@ const TableBody = styled.table`
 
 const TableRow = styled.tr.attrs(props => ({
     borderLeft: props.borderLeft ? ".5rem solid #e2e2e2" : "none",
-    borderBottom: props.borderBottom ? ".1rem solid #e6e6e6" : "none",
+    borderY: props.borderY ? ".1rem solid #e6e6e6" : "none",
 }))`
     padding: 1rem;
     width: 100%;
-    border-bottom: ${props => props.borderBottom};
+    border-bottom: ${props => props.borderY};
+    border-top: ${props => props.borderY};
 
     td:nth-child(2) {
         border-left: ${props => props.borderLeft};
