@@ -1,5 +1,8 @@
 import React from 'react';
 
+// svgs
+import { RightCaret } from 'ui-kit/icons';
+
 // enums
 import { colorMapping } from 'utils/enums';
 
@@ -24,6 +27,11 @@ const CandidateExpand = (applicationList) => {
                         </TableData>
                         <TableData expand>
                             <TableStatus background={colorMapping[application.new_status.color]} /> {application.new_status.label}
+                        </TableData>
+                        <TableData />
+                        <TableData />
+                        <TableData>
+                            <RightCaret className="svg__icon" />
                         </TableData>
                     </TableRow>
                 )

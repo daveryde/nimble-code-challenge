@@ -103,9 +103,9 @@ const CandidateTableStyled = () => {
                                         <TableData>
                                             {result.applications[0].updated}
                                         </TableData>
-                                        <td>
+                                        <TableData>
                                             {renderable === result.id && isDisplayed ? <MinusSign /> : <PlusSign />}
-                                        </td>
+                                        </TableData>
                                     </TableRow>
                                     {renderable === result.id && isDisplayed &&
                                         <CandidateExpand applications={result.applications} />
