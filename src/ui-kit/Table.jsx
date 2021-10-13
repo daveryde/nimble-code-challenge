@@ -83,7 +83,7 @@ const TableData = styled.td.attrs(props => ({
 }))`
     max-width: 8rem;
     background: ${props => props.expand ? "#FFF" : "none"};
-    padding: 1rem .5rem;
+    padding: .7rem .5rem;
     border-bottom: .1rem solid #e6e6e6;
  `;
 
