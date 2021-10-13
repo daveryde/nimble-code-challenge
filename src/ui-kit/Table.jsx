@@ -51,13 +51,13 @@ const TableSearchButton = styled.button`
  `;
 
 const TableContainer = styled.section`
-    display: flex;
-    justify-content: center;
-    width: 100vw;
+    width: 90vw;
+    max-width: 90vw;
+    margin: 0 auto;
  `;
 
 const TableBody = styled.table`
-    width: 96vw;
+    width: 100%;
     margin: 2rem 0;
     border-collapse: collapse;
  `;
