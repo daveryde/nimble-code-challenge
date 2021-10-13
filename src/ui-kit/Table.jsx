@@ -59,14 +59,16 @@ const TableContainer = styled.section`
 const TableBody = styled.table`
     width: 96vw;
     margin: 2rem 0;
+    border-collapse: collapse;
  `;
 
 const TableRow = styled.tr.attrs(props => ({
-    borderLeft: props.borderLeft ? ".5rem solid #e2e2e2" : "none"
+    borderLeft: props.borderLeft ? ".5rem solid #e2e2e2" : "none",
+    borderBottom: props.borderBottom ? ".1rem solid #e6e6e6" : "none",
 }))`
     padding: 1rem;
     width: 100%;
-    border-bottom: .1rem solid #e6e6e6;
+    border-bottom: ${props => props.borderBottom};
 
     td:nth-child(2) {
         border-left: ${props => props.borderLeft};
@@ -79,12 +81,13 @@ const TableHead = styled.th`
  `;
 
 const TableData = styled.td.attrs(props => ({
-    expand: props.expand
+    expand: props.expand,
+    borderBottom: props.borderBottom ? ".1rem solid #e6e6e6" : "none",
 }))`
     max-width: 8rem;
     background: ${props => props.expand ? "#FFF" : "none"};
     padding: .7rem .5rem;
-    border-bottom: .1rem solid #e6e6e6;
+    border-bottom: ${props => props.borderBottom};
  `;
 
 const TableStatus = styled.div.attrs(props => ({

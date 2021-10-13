@@ -22,15 +22,25 @@ const CandidateExpand = (applicationList) => {
                         borderLeft
                         key={application.id}>
                         <TableData />
-                        <TableData expand>
+                        <TableData
+                            expand
+                            borderBottom>
                             {application.role.title}
                         </TableData>
-                        <TableData expand>
+                        <TableData
+                            expand
+                            borderBottom>
                             <TableStatus background={colorMapping[application.new_status.color]} /> {application.new_status.label}
                         </TableData>
-                        <TableData />
-                        <TableData />
-                        <TableData>
+                        <TableData
+                            expand
+                            borderBottom />
+                        <TableData
+                            expand
+                            borderBottom />
+                        <TableData
+                            expand
+                            borderBottom>
                             <RightCaret className="svg__icon" />
                         </TableData>
                     </TableRow>

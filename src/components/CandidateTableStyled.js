@@ -57,7 +57,7 @@ const CandidateTableStyled = () => {
             <TableContainer>
                 <TableBody>
                     <thead>
-                        <TableRow>
+                        <TableRow borderBottom>
                             <TableHead>
                                 <input
                                     type="checkbox"
@@ -84,6 +84,7 @@ const CandidateTableStyled = () => {
                             return (
                                 <Fragment key={result.id}>
                                     <TableRow
+                                        borderBottom
                                         onClick={() => {
                                             setRenderable(result.id);
                                             setIsDisplayed(!isDisplayed);
