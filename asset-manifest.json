@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/nimble-code-challenge/static/css/main.a9a754ca.chunk.css",
+    "main.js": "/nimble-code-challenge/static/js/main.180670eb.chunk.js",
+    "main.js.map": "/nimble-code-challenge/static/js/main.180670eb.chunk.js.map",
+    "runtime-main.js": "/nimble-code-challenge/static/js/runtime-main.f002a3ad.js",
+    "runtime-main.js.map": "/nimble-code-challenge/static/js/runtime-main.f002a3ad.js.map",
+    "static/js/2.937558a0.chunk.js": "/nimble-code-challenge/static/js/2.937558a0.chunk.js",
+    "static/js/2.937558a0.chunk.js.map": "/nimble-code-challenge/static/js/2.937558a0.chunk.js.map",
+    "index.html": "/nimble-code-challenge/index.html",
+    "precache-manifest.bf0085e37dd775e8418ce362f856673f.js": "/nimble-code-challenge/precache-manifest.bf0085e37dd775e8418ce362f856673f.js",
+    "service-worker.js": "/nimble-code-challenge/service-worker.js",
+    "static/css/main.a9a754ca.chunk.css.map": "/nimble-code-challenge/static/css/main.a9a754ca.chunk.css.map",
+    "static/js/2.937558a0.chunk.js.LICENSE.txt": "/nimble-code-challenge/static/js/2.937558a0.chunk.js.LICENSE.txt",
+    "static/media/down_caret.15f048ac.svg": "/nimble-code-challenge/static/media/down_caret.15f048ac.svg",
+    "static/media/icon-minus-with-circle.8899ba33.svg": "/nimble-code-challenge/static/media/icon-minus-with-circle.8899ba33.svg",
+    "static/media/icon-plus-with-circle.05e01fa3.svg": "/nimble-code-challenge/static/media/icon-plus-with-circle.05e01fa3.svg",
+    "static/media/note.7f0971ef.svg": "/nimble-code-challenge/static/media/note.7f0971ef.svg",
+    "static/media/right_caret.9f7596ff.svg": "/nimble-code-challenge/static/media/right_caret.9f7596ff.svg",
+    "static/media/scorecard.767765e6.svg": "/nimble-code-challenge/static/media/scorecard.767765e6.svg",
+    "static/media/search_white.12b5a5f3.svg": "/nimble-code-challenge/static/media/search_white.12b5a5f3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f002a3ad.js",
+    "static/js/2.937558a0.chunk.js",
+    "static/css/main.a9a754ca.chunk.css",
+    "static/js/main.180670eb.chunk.js"
+  ]
+}
