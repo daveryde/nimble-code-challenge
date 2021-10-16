@@ -18,7 +18,6 @@
 - Enum mappings and some colors are provided in src/utils/enums.js.
 - The styled-components library is included in the package.json file. Feel free to use that for styling if you'd like.
 - For the Last Action column, moment.js is included if you want to use it, but feel free to display the date any way you prefer.
-- When you're done, please write a quick post-mortem -- any tradeoffs you made and why, things we should look for, etc.
 <br />
 
 
@@ -31,7 +30,7 @@ To get a local copy up and running follow these steps.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/NimbleHiring/coding-challenge.git
+git clone https://github.com/daveryde/nimble-code-challenge.git
 ```
 2. In the root directory of the repo, install NPM packages
 ```sh
@@ -42,18 +41,6 @@ npm install
 yarn start
 ```
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-William Gray - wgray@hirenimble.com
-<br />
-Lauren Dachille - lauren@hirenimble.com
-<br />
-Sean Caetano Martin - sean@hirenimble.com
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

@@ -1,11 +1,9 @@
 import React from 'react';
-import CandidateTable from './CandidateTable';
+import CandidateTableStyled from './CandidateTableStyled';
 
 const Dashboard = () => {
     return (
-        <>
-            <CandidateTable />
-        </>
+        <CandidateTableStyled />
     )
 };
 

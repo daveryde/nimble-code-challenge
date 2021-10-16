@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f8f8f8;
+  color: #797b84;
+  overflow-x: hidden;
 }
 
 code {
@@ -12,28 +15,13 @@ code {
     monospace;
 }
 
-.table {
-  width: 100%;
-}
-
-.table__head {
-  padding: .6rem;
-  text-align: left;
-}
-
-.table__row, .table__data {
-  border-bottom: 1px solid black;
-}
-
-.table__row {
-  padding: 1rem;
-  width: 100%;
-}
-
-.table__data {
-  padding: .5rem;
-}
-
 .svg__icon {
-  width: 2vmin
+  width: 2vmin;
+  margin-left: .3rem;
+  fill: #797b84;
+}
+
+.svg__icon--search {
+  width: 2.5vmin;
+  margin: 0;
 }

@@ -1,16 +1,49 @@
 import React from 'react';
 
+// svgs
+import { RightCaret } from 'ui-kit/icons';
+
+// enums
+import { colorMapping } from 'utils/enums';
+
+// table ui
+import {
+    TableRow,
+    TableData,
+    TableStatus
+} from '../ui-kit/Table';
+
 const CandidateExpand = (applicationList) => {
-    let data = applicationList.applications.map(item => item);
-    console.log(data);
     return (
         <>
-            {applicationList.applications.map(item => {
+            {applicationList.applications.map((application) => {
                 return (
-                    <div className="table__data--expand">
-                        {item.role.title}
-                        {item.new_status.label}
-                    </div>
+                    <TableRow
+                        borderLeft
+                        key={application.id}>
+                        <TableData />
+                        <TableData
+                            expand
+                            borderBottom>
+                            {application.role.title}
+                        </TableData>
+                        <TableData
+                            expand
+                            borderBottom>
+                            <TableStatus background={colorMapping[application.new_status.color]} /> {application.new_status.label}
+                        </TableData>
+                        <TableData
+                            expand
+                            borderBottom />
+                        <TableData
+                            expand
+                            borderBottom />
+                        <TableData
+                            expand
+                            borderBottom>
+                            <RightCaret className="svg__icon" />
+                        </TableData>
+                    </TableRow>
                 )
             })}
         </>
